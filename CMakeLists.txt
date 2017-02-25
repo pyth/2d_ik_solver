@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.4)
 project(ik_solver)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_PREFIX_PATH "" CACHE PATH "3rd party libraries and headers")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
