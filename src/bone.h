@@ -28,14 +28,14 @@ public:
 	Bone(unsigned int r, unsigned int g, unsigned int b, int parent_index = -1);
 	~Bone();
 
-	void set_offset(Vector2d offset);
-	void set_scale(Vector2d scale);
+	void set_offset(int x, int y);
+	void set_scale(int x, int y);
 	void set_rot(double rot);
-	void set_transl(Vector2d transl);
+	void set_transl(int x, int y);
 
-	void increse_scale(Vector2d scale);
+	void increse_scale(int x, int y);
 	void increse_rot(double rot);
-	void increse_transl(Vector2d transl);
+	void increse_transl(int x, int y);
 };
 
 #endif

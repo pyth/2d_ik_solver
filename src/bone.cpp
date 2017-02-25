@@ -18,16 +18,16 @@ Bone::Bone(unsigned int r, unsigned int g, unsigned int b, int parent_index) {
 Bone::~Bone() {
 }
 
-void Bone::set_offset(Vector2d offset) {
-	this->offset(0, 2) = offset.x();
-	this->offset(1, 2) = offset.y();
+void Bone::set_offset(int x, int y) {
+	this->offset(0, 2) = x;
+	this->offset(1, 2) = y;
 }
 
-void Bone::set_scale(Vector2d scale) {
-	s = scale;
+void Bone::set_scale(int x, int y) {
+	s << x, y;
 
-	this->scale(0, 0) = scale.x();
-	this->scale(1, 1) = scale.y();
+	this->scale(0, 0) = x;
+	this->scale(1, 1) = y;
 }
 
 void Bone::set_rot(double rot) {
@@ -39,16 +39,17 @@ void Bone::set_rot(double rot) {
 	this->rot(1, 1) = cos(rot);
 }
 
-void Bone::set_transl(Vector2d transl) {
-	t = transl;
+void Bone::set_transl(int x, int y) {
+	t << x, y;
 
-	this->transl(0, 2) = transl.x();
-	this->transl(1, 2) = transl.y();
+	this->transl(0, 2) = x;
+	this->transl(1, 2) = y;
 }
 
-void Bone::increse_scale(Vector2d scale) {
-	s += scale;
-	set_scale(s);
+void Bone::increse_scale(int x, int y) {
+	s.x() += x;
+	s.y() += y;
+	set_scale(s.x(), s.y());
 }
 
 void Bone::increse_rot(double rot) {
@@ -56,7 +57,8 @@ void Bone::increse_rot(double rot) {
 	set_rot(r);
 }
 
-void Bone::increse_transl(Vector2d transl) {
-	t += transl;
-	set_transl(t);
+void Bone::increse_transl(int x, int y) {
+	t.x() += x;
+	t.y() += y;
+	set_transl(t.x(), t.y());
 }

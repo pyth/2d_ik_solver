@@ -11,20 +11,20 @@ Window::Window() {
 
 	Bone *bone1 = new Bone(255, 0, 0);
 	bone1->set_rot(0.f);
-	bone1->set_transl(Vector2d(250, 300));
-	bone1->set_offset(Vector2d(200, 0));
+	bone1->set_transl(250, 300);
+	bone1->set_offset(200, 0);
 	chain->add_link(bone1);
 
 	Bone *bone2 = new Bone(0, 255, 0, 0);
-	bone2->set_offset(Eigen::Vector2d(100, 0));
+	bone2->set_offset(100, 0);
 	chain->add_link(bone2);
 
 	Bone *bone3 = new Bone(0, 0, 255, 1);
-	bone3->set_offset(Eigen::Vector2d(50, 0));
+	bone3->set_offset(50, 0);
 	chain->add_link(bone3);
 
 	Bone *bone4 = new Bone(255, 0, 255, 2);
-	bone4->set_offset(Eigen::Vector2d(25, 0));
+	bone4->set_offset(25, 0);
 	chain->add_link(bone4);
 }
 
