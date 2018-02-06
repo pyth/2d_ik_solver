@@ -1,3 +1,5 @@
+![island screenshot](https://github.com/pyth/screenshots/blob/master/ik_solver.png)
+
 # 2d_ik_solver
 A simple inverse kinematics solver for an arm in 2d
 
