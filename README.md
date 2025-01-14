@@ -13,7 +13,7 @@ This is an implementation on an inverse kinematics solver for an arm with variab
 ## Build
   1. Install missing dependencies
   ```
-    conan install .
+    conan install . --build=missing
   ```
   2. Build the project
   ```
