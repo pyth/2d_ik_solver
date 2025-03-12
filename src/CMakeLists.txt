@@ -9,5 +9,4 @@ find_package(Eigen3 REQUIRED)
 
 add_executable(${PROJECT_NAME} ${SOURCE} ${HEADERS})
 
-target_link_libraries(${PROJECT_NAME} SDL2)
-target_link_libraries(${PROJECT_NAME} Eigen3::Eigen)
+target_link_libraries(${PROJECT_NAME} SDL2::SDL2main Eigen3::Eigen)
