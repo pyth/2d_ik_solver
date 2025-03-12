@@ -1,0 +1,6 @@
+build
+CMakeFiles
+CMakeCache.txt
+*.bat
+*.cmake
+*.json
